@@ -10,7 +10,7 @@ class Backer
   def back_project(project)
     @backed_projects << project
     #When a backer has added a project to its list of backed projects, that project should also add the backer to its list of backers
-    project.add_backer(self) unless project.add_backer == self
+    project.add_backer(self) unless project.backers#the backer is already in @backers array
   end
 
 end
